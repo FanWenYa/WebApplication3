@@ -18,11 +18,11 @@ namespace WebApplication3
             string statecode = context.Request["statecode"];
 
             string state = new BLL.UserManage().select_statecode(statecode);
-            if(state == "超级管理员1"  && username != null)
+            if(state == "超级管理员"  && username != null)
             {
                 if(new BLL.UserManage().delete(username))
                 {
-                    context.Response.Write("删除成功");
+                    context.Response.Write("删除成功!");
                 }
             }
 
