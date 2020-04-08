@@ -1,0 +1,20 @@
+﻿<form class="form-horizontal ">
+    <div class="form-group">
+        <label class="col-md-offset-3 col-md-1 control-label">帐号:</label>
+        <input ng-model="user" type="text" class="form-contorl  col-md-4" placeholder="请输入要注册的帐号" />
+        <label class="col-md-2 control-label user-judge" ng-bind="user_input" ng-if="users"></label>
+    </div>
+    <div class="form-group">
+        <label class="col-md-offset-3 col-md-1  control-label">密码:</label>
+        <input ng-model="password" type="password" class="form-contorl col-md-4" placeholder="请输入密码" />
+        <label class="col-md-2 control-label user-judge"  ng-bind="password_input" ng-if="passwords"></label>
+    </div>
+    <div class="form-group">
+        <label class="col-md-offset-3 col-md-1 control-label">确认密码:</label>
+        <input ng-model="password2" type="password" class="form-contorl col-md-4" placeholder="请再次确认密码" />
+        <label class="col-md-2 control-label user-judge" ng-bind="password2_input" ng-if="password2s"></label>
+    </div>
+    <div class="form-group">
+        <button ng-click="registerget()" type="button" class="col-md-offset-5 col-md-2">提交</button>
+    </div>
+</form>

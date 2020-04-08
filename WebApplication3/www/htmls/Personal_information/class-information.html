@@ -1,0 +1,143 @@
+﻿<ul class="col-md-offset-1  col-md-8 main-hot-centent text-center ">
+    <li class="col-md-12">
+        <select class="btn btn-default col-md-3" ng-change="select_system()" ng-model="system"  >
+        <option   ng-repeat="x in systems" value="{{x}}">{{x}}</option>
+        </select>
+        <select class="btn btn-default col-md-3" ng-change="select_students();" ng-model="class" >
+            <option ng-repeat="x in classs" value="{{x}}">{{x}}</option>
+        </select>
+        <select class="btn btn-default col-md-3" ng-change="select_students();" ng-model="grade" >
+            <option ng-repeat="x in grades" value="{{x}}">{{x}}</option>
+        </select>
+        <button class="btn btn-primary col-md-offset-1 col-md-2" ng-if="state1" ng-click="insert()" data-toggle="modal" data-target="#myModal">
+            添加
+        </button>
+    </li>
+    <li class="col-md-12">
+    <span class="col-md-2">学号</span><span class="col-md-2">姓名</span><span class="col-md-2">班级</span><span class="col-md-2">年级</span></li>
+    <li class="col-md-12" ng-repeat="x in students">
+        <span class="col-md-2">{{x.Sid}}</span>
+        <span class="col-md-2">{{x.Sname}}</span>
+        <span class="col-md-2">{{x.Sclass}}</span>
+        <span class="col-md-2">{{x.Sgrade}}</span>
+        <span ng-if="state1" class="col-md-2"><button  class="col-md-offset-2 col-md-8 btn btn-default" ng-click="modify(x.Sid,x.Sname,x.Sclass,x.Sgrade,x.Ssystem)" data-toggle="modal" data-target="#myModal">修改</button></span>
+        <span ng-if="state1" class="col-md-2"><button class="col-md-offset-2 col-md-8 btn btn-default" ng-click="delete(x.Sid)">删除</button></span>
+    </li>
+</ul>
+<div class="modal fade " ng-if="insertstudent" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    添加学生信息
+                </h4>
+            </div>
+            <div class="modal-body text-center " name="angularForm">
+                <form class="row" name="angularForm">
+                    <p class="col-md-12">
+                        <label class="col-md-offset-2  col-md-2">学号:</label>
+                        <input class="btn btn-default btn-input col-md-4" required type="text" name="sid" ng-model="$parent.sid" maxlength="2" ng-minlength=2  />
+                        <span class="col-md-1" ng-show="angularForm.sid.$error.required">*</span>
+                         <span class="col-md-3"  ng-show="angularForm.sid.$error.minlength ">请输入座位号</span>
+
+                    </p>
+                    <p class="col-md-12">
+                        <label class="col-md-offset-2  col-md-2">姓名:</label>
+                        <input class="btn btn-default btn-input col-md-4" type="text" name="sname" ng-model="$parent.sname" ng-minlength=2 required />
+                        <span class="col-md-1" ng-show="angularForm.sname.$error.required">*</span>
+                        <span class="col-md-3" ng-show="angularForm.sname.$error.minlength ">请输入姓名</span>
+                    </p>
+                    <p class="col-md-12">
+                        <label class="col-md-offset-2  col-md-2">身份证:</label>
+                        <input class="btn btn-default btn-input col-md-4" type="text" ng-model="$parent.id2" name="id2"  ng-minlength=18 maxlength="18" required/>
+                        <span class="col-md-1" ng-show="angularForm.id2.$error.required">*</span>
+                        <span class="col-md-4" ng-show="angularForm.id2.$error.minlength ">身份证号为18位数字组成</span>
+                    </p>
+                    <p class="col-md-12">
+                        <label class="col-md-offset-2  col-md-2">手机号:</label>
+                        <input class="btn btn-default btn-input col-md-4" type="text" name="sphone2" ng-model="$parent.sphone2" ng-minlength=11 maxlength="11" required/>
+                        <span class="col-md-1" ng-show="angularForm.sphone2.$error.required">*</span>
+                        <span class="col-md-4" ng-show="angularForm.sphone2.$error.minlength ">手机号为11位数字组成</span>
+                     </p>
+                    <p class="col-md-12">
+                        <label class="col-md-offset-2  col-md-2">出生日期:</label>
+                        <input class="btn btn-default btn-input col-md-4" type="date" id="mydate" />
+                    </p>
+                    <p class="col-md-12">
+                        <label class="col-md-offset-2  col-md-2">系部:</label>
+                        <select class="btn btn-default btn-input col-md-4" ng-change="select_system2()" ng-model="$parent.system2">
+                            <option ng-repeat="x in systems" value="{{x}}">{{x}}</option>
+                        </select>
+                    </p>
+                    <p class="col-md-12">
+                        <label class="col-md-offset-2  col-md-2">班级:</label>
+                        <select class="btn btn-default btn-input col-md-4" ng-model="$parent.sclass2">
+                            <option ng-repeat="x in classs2" value="{{x}}">{{x}}</option>
+                        </select>
+                    </p>
+                    <p class="col-md-12">
+                        <label class="col-md-offset-2  col-md-2">年级:</label>
+                        <select class="btn btn-default btn-input col-md-4" ng-model="$parent.sgrade2">
+                            <option ng-repeat="x in grades2" value="{{x}}">{{x}}</option>
+                        </select>
+                    </p>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    关闭
+                </button>
+                <button type="button" class="btn btn-primary" ng-click="put()" ng-disabled="angularForm.sid.$error.minlength">
+                    提交更改
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+    </div>
+
+    <div class="modal fade " ng-if="modifystudent" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        修改学生信息
+                    </h4>
+                </div>
+                <div class="modal-body text-center ">
+                    <ul>
+                        <li>
+                            <p>
+                                <label>姓名:</label>
+                                <input type="text" ng-model="$parent.sname"/>
+                            </p>
+                            <p>
+                                <label>班级:</label>
+                                <input type="text" ng-model="$parent.sclass" />
+                            </p>
+                            <p>
+                                <label>年级:</label>
+                                <input type="text" ng-model="$parent.sgrade" />
+                            </p>
+                            <p>
+                                <label>系部:</label>
+                                <input type="text" ng-model="$parent.ssystem" />
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" ng-click="insertput()">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+

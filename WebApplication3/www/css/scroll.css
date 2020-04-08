@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.scroll-box{
+    position: relative;
+    overflow: hidden;
+}
+.scroll-box .scroll-box-img{
+    position: absolute;
+}
+.scroll-box .scroll-box-img img{
+    float: left;
+}
+.scroll-box-btn{
+    position: absolute;
+    display: none;
+    width: 30px;
+    height: 50px; 
+    line-height: 46px;
+    color:  rgb(217,217,217);
+    font-size: 40px;
+    text-align: center;
+    cursor:pointer;
+}
+.scroll-box:hover .scroll-box-btnlf,
+.scroll-box:hover .scroll-box-btnrg{
+    display: block;
+}
+.scroll-box-btnlf{
+    left: 2%;
+    top: 50%;
+    margin-top: -25px;
+}
+.scroll-box-btnrg{  
+    right: 2%;
+    top: 50%;
+    margin-top: -25px;
+}
+.button-box {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    height: 10px;
+}
+.button-box span {
+    float: left;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgb(217,217,217);
+    cursor: pointer;
+}
+.button-box .buttons1 {
+    background: rgb(250,135,37);
+}

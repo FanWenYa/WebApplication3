@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4DC1AF84-846B-4599-B1B8-54979BB69964}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication3</RootNamespace>
+    <AssemblyName>WebApplication3</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net35\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="www\angular-file-upload-master\.idea\misc.xml" />
+    <Content Include="www\angular-file-upload-master\.idea\modules.xml" />
+    <Content Include="www\angular-file-upload-master\.idea\workspace.xml" />
+    <Content Include="www\angular-file-upload-master\dist\angular-file-upload.js" />
+    <Content Include="www\angular-file-upload-master\dist\angular-file-upload.min.js" />
+    <Content Include="www\angular-file-upload-master\examples\console-sham.js" />
+    <Content Include="www\angular-file-upload-master\examples\console-sham.min.js" />
+    <Content Include="www\angular-file-upload-master\examples\image-preview\controllers.js" />
+    <Content Include="www\angular-file-upload-master\examples\image-preview\directives.js" />
+    <Content Include="www\angular-file-upload-master\examples\image-preview\index.html" />
+    <Content Include="www\angular-file-upload-master\examples\image-preview\uploads\gap.txt" />
+    <Content Include="www\angular-file-upload-master\examples\simple\controllers.js" />
+    <Content Include="www\angular-file-upload-master\examples\simple\directives.js" />
+    <Content Include="www\angular-file-upload-master\examples\simple\index.html" />
+    <Content Include="www\angular-file-upload-master\examples\simple\uploads\gap.txt" />
+    <Content Include="www\angular-file-upload-master\examples\without-bootstrap\controllers.js" />
+    <Content Include="www\angular-file-upload-master\examples\without-bootstrap\directives.js" />
+    <Content Include="www\angular-file-upload-master\examples\without-bootstrap\index.html" />
+    <Content Include="www\angular-file-upload-master\examples\without-bootstrap\style.css" />
+    <Content Include="www\angular-file-upload-master\examples\without-bootstrap\uploads\gap.txt" />
+    <Content Include="www\angular-file-upload-master\gulpfile.js" />
+    <Content Include="www\angular-file-upload-master\license.txt" />
+    <Content Include="www\angular-file-upload-master\src\directives\FileDrop.js" />
+    <Content Include="www\angular-file-upload-master\src\directives\FileOver.js" />
+    <Content Include="www\angular-file-upload-master\src\directives\FileSelect.js" />
+    <Content Include="www\angular-file-upload-master\src\index.js" />
+    <Content Include="www\angular-file-upload-master\src\services\FileDirective.js" />
+    <Content Include="www\angular-file-upload-master\src\services\FileDrop.js" />
+    <Content Include="www\angular-file-upload-master\src\services\FileItem.js" />
+    <Content Include="www\angular-file-upload-master\src\services\FileLikeObject.js" />
+    <Content Include="www\angular-file-upload-master\src\services\FileOver.js" />
+    <Content Include="www\angular-file-upload-master\src\services\FileSelect.js" />
+    <Content Include="www\angular-file-upload-master\src\services\FileUploader.js" />
+    <Content Include="www\angular-file-upload-master\src\services\Pipeline.js" />
+    <Content Include="www\angular-file-upload-master\src\values\options.js" />
+    <Content Include="www\angular-file-upload-master\WebpackConfig.js" />
+    <Content Include="www\css\scroll.css" />
+    <Content Include="www\css\style.css" />
+    <Content Include="www\htmls\Personal_information\authority-management.html" />
+    <Content Include="www\htmls\Personal_information\data-1.html" />
+    <Content Include="www\htmls\Personal_information\data.html" />
+    <Content Include="www\htmls\Personal_information\class-information.html" />
+    <Content Include="www\common\register.html" />
+    <Content Include="www\htmls\nav\nav.html" />
+    <Content Include="www\common\login.html" />
+    <Content Include="www\htmls\student_information.html" />
+    <Content Include="www\index.html" />
+    <Content Include="www\js\app.js" />
+    <Content Include="www\js\controllers.js" />
+    <Content Include="www\js\index.js" />
+    <Content Include="www\js\jquery-1.7.2.min.js" />
+    <Content Include="www\js\jquery.cookie.js" />
+    <Content Include="www\js\ocLazyLoad.min.js" />
+    <Content Include="www\js\scroll.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addstudent.ashx.cs">
+      <DependentUpon>addstudent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="deletestudent.ashx.cs">
+      <DependentUpon>deletestudent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteusername.ashx.cs">
+      <DependentUpon>deleteusername.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler2.ashx.cs">
+      <DependentUpon>Handler2.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Jurisdiction.ashx.cs">
+      <DependentUpon>Jurisdiction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="login.ashx.cs">
+      <DependentUpon>login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="modifyjurisdiction.ashx.cs">
+      <DependentUpon>modifyjurisdiction.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="modifystudent.ashx.cs">
+      <DependentUpon>modifystudent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.ashx.cs">
+      <DependentUpon>register.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="login.ashx" />
+    <Content Include="packages.config" />
+    <Content Include="Handler1.ashx" />
+    <Content Include="addstudent.ashx" />
+    <Content Include="deletestudent.ashx" />
+    <Content Include="modifystudent.ashx" />
+    <Content Include="register.ashx" />
+    <Content Include="Jurisdiction.ashx" />
+    <Content Include="modifyjurisdiction.ashx" />
+    <Content Include="deleteusername.ashx" />
+    <Content Include="Handler2.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="www\angular-file-upload-master\.babelrc" />
+    <Content Include="www\angular-file-upload-master\.gitignore" />
+    <Content Include="www\angular-file-upload-master\.idea\angular-file-upload-master.iml" />
+    <Content Include="www\angular-file-upload-master\.jshintrc" />
+    <Content Include="www\angular-file-upload-master\bower.json" />
+    <Content Include="www\angular-file-upload-master\CONTRIBUTING.md" />
+    <Content Include="www\angular-file-upload-master\dist\angular-file-upload.js.map" />
+    <Content Include="www\angular-file-upload-master\dist\angular-file-upload.min.js.map" />
+    <Content Include="www\angular-file-upload-master\examples\image-preview\upload.php" />
+    <Content Include="www\angular-file-upload-master\examples\simple\upload.php" />
+    <Content Include="www\angular-file-upload-master\examples\without-bootstrap\upload.php" />
+    <Content Include="www\angular-file-upload-master\package.json" />
+    <Content Include="www\angular-file-upload-master\README.md" />
+    <Content Include="www\angular-file-upload-master\src\config.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dll\BLL.csproj">
+      <Project>{6b181f91-07be-441e-84e9-2f73a95ae936}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\model\Model.csproj">
+      <Project>{644e5484-28b9-4bb9-a1cc-0db2d18071c5}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="www\angular-file-upload-master\.idea\inspectionProfiles\" />
+    <Folder Include="www\imges\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4412</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4412/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

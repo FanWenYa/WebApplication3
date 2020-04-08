@@ -1,0 +1,42 @@
+﻿ul{
+    text-decoration:none;
+    list-style:none;
+}
+.navbox{
+    overflow: hidden;
+    background: #f1f1f1;
+    margin-bottom: 20px;
+}
+.nav-nav{
+    margin-bottom:20px;
+    float: right;
+}
+.nav-nav  li  a{
+    padding: 5px 15px;
+}
+.nav .display{
+   display:none;
+}
+.form-group label{
+    line-height: 28px;
+}
+.form-group input{
+    height: 40px;
+}
+.form-group button{
+    height: 40px;
+    border: 0;
+    color: #ffffff;
+    background: #34b5f2;
+}
+.jumbotron{
+    text-align:center;
+}
+.btn-input{
+    text-align:left !important;
+    cursor:inherit !important;
+}
+.user-judge{
+     text-align:left !important;
+     color:#ef2222 !important;
+}

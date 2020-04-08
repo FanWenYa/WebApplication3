@@ -1,0 +1,11 @@
+﻿<div class="row">
+        <div class="col-md-12 navbox ">
+            <ul class="nav nav-pills nav-nav">
+                <li><a ui-sref="index.notice">主页</a></li>
+                <li ng-if='loginout'><a ui-sref="index.login">登录</a></li>
+                <li ng-if='loginout'><a ui-sref="index.register">注册</a></li>
+                <li ng-if='login'><a ng-click="out()" href="javascript:;">退出</a></li>
+            </ul>
+        </div>
+    <div  ui-view></div>
+</div>
